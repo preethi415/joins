@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>EquiJoin</h1>
+        <table border="3px">
+            <tr>
+                <th>empno</th>
+                <th>ename</th>
+                <th>job</th>
+                <th>hiredate</th>
+                <th>MGR</th>
+                <th>sal</th>
+                <th>comm</th>
+                <th>deptno</th>
+                <th>dname</th>
+                <th>dloc</th>
+                
+            </tr>
+
+        {% for emp in EQUIOBJECT %}
+        <tr>
+            <td>{{emp.empno}}</td>
+            <td>{{emp.ename}}</td>
+            <td>{{emp.job}}</td>
+            <td>{{emp.hiredate}}</td>
+            <td>{{emp.MGR.empno}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{emp.comm}}</td>
+            <td>{{emp.deptno.deptno}}</td>
+            <td>{{emp.deptno.dname}}</td>
+            <td>{{emp.deptno.dloc}}</td>
+            
+
+        </tr>
+
+
+        {% endfor %}
+
+
+
+
+
+
+
+
+        </table>
+    </center>
+    
+</body>
+</html>
